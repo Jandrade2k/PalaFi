@@ -2,9 +2,9 @@
   "name": "palafi",
   "version": "1.0.0",
   "description": "aplicação de controle de fiados",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jandrade2k/PalaFi/issues"
   },
-  "homepage": "https://github.com/Jandrade2k/PalaFi#readme"
+  "homepage": "https://github.com/Jandrade2k/PalaFi#readme",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  }
 }
