@@ -7,6 +7,9 @@ exports.up = function(knex) {
       table.decimal('valor_venda').notNullable();
       table.integer('quantidade').notNullable();
       table.integer('status').notNullable();
+
+      table.string('categoria_id').notNullable();
+      table.foreign('categoria_id').references('id').inTable('categorias');
   })
 };
 

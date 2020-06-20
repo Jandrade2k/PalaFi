@@ -10,7 +10,7 @@ module.exports = {
     },
 
     async create(req, res) {
-        const {nome, valor_compra, valor_venda, quantidade, status} = req.body;
+        const {nome, valor_compra, valor_venda, quantidade, status, categoria_id} = req.body;
         const id = crypto.randomBytes(4).toString('HEX');
 
         await connection('produtos').insert({
@@ -19,7 +19,8 @@ module.exports = {
             valor_compra,
             valor_venda,
             quantidade,
-            status
+            status,
+            categoria_id
         })
 
         return res.json({id});

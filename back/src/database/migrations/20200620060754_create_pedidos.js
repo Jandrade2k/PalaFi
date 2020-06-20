@@ -5,6 +5,7 @@ exports.up = function(knex) {
         table.date('data_emissao').notNullable();
         table.date('data_aprovacao').notNullable();
         table.integer('parcelas').notNullable();
+        table.integer('descricao').notNullable();
 
         table.string('cliente_id').notNullable();
         table.foreign('cliente_id').references('id').inTable('clientes');
